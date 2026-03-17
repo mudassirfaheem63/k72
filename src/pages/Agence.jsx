@@ -35,7 +35,12 @@ const Agence = () => {
         start:'top 27%',
         end:'top -90%',
         pin:true,
-        scrub:true,
+        pinSpacing: true,
+        pinReparent: true,
+        pinType: 'transform',
+        scrub: 1, // smooth scrubbing with 1s easing
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
          onUpdate:(elem)=>{
           let imageIndex;
           if (elem.progress < 1) {
@@ -55,7 +60,7 @@ const Agence = () => {
 
   return (
    <div>
-     <div id='section1'>
+     <div id='section1' className='py-1 relative '>
       <div ref={imageDivRef} className='h-[20vw] rounded-xl  overflow-hidden w-[15vw] top-45 left-[30vw] absolute'>
         <img ref={imageRef} className='h-full object-cover w-full' src="https://k72.ca/images/teamMembers/Carl_480x640.jpg?w=480&h=640&fit=crop&s=f0a84706bc91a6f505e8ad35f520f0b7" alt="" />
       </div>
