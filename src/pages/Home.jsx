@@ -5,7 +5,7 @@ import HomeBottomText from '../components/home/HomeBottomText'
 
 const Home = () => {
   return (
-    <div className='text-white'>
+    <div className='text-white overflow-x-hidden'>
      <div className=" h-screen fixed w-screen">
       <Video />
      </div>
