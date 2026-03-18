@@ -62,7 +62,7 @@ const FullScreenNav = () => {
     <div
       ref={fullScreenRef}
       id="fullscreennav"
-      className="fullscreennav fixed top-0 left-0 text-white h-screen w-screen overflow-hidden"
+      className="fullscreennav fixed top-0 left-0  text-white h-screen w-screen overflow-x-hidden"
       style={{ display: 'none', zIndex: 50 }}
     >
       <div className="absolute inset-0 bg-black" style={{ zIndex: 10 }} />
