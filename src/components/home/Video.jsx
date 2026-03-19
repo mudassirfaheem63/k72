@@ -9,7 +9,7 @@ const Video = () => {
           autoPlay 
           loop 
           muted 
-          src={`${import.meta.env.BASE_URL}video.mp4`}
+          src={`../../../public/video.mp4`}
         ></video>
     </div>
   )
