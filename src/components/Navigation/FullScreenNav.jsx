@@ -1,11 +1,12 @@
 import { useGSAP } from '@gsap/react';
-import React, { useContext, useRef } from 'react';
+import React, { useRef, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
-import { NavBarContext } from '../../context/NavContext';
+import { NavbarContext } from '../../context/NavContext';
 
 const FullScreenNav = () => {
   const fullScreenRef = useRef(null)
-  const [navOpen, setNavOpen] = useContext(NavBarContext)
+  const [navOpen, setNavOpen] = useContext(NavbarContext) // ✅ Fixed: using useContext
 
   useGSAP(function () {
 
@@ -93,10 +94,10 @@ const FullScreenNav = () => {
           </div>
         </div>
 
-        <div id="all-links" className="lg:py-33 py-60">
+        <div id="all-links" className="lg:py-18 py-60">
 
-          <div className="link origin-top relative border-t border-white overflow-hidden">
-            <h1 className="font-[font2] lg:text-[8vw] text-[15vw] text-center uppercase pt-3 leading-[0.8]">Projects</h1>
+          <Link to="/projects" className="link origin-top relative border-t border-b border-white overflow-hidden block" onClick={() => setNavOpen(false)}>
+            <div className="font-[font2] lg:text-[8vw] text-[15vw] text-center uppercase pt-3 leading-[0.8]">Projects</div>
             <div className="moveLink flex absolute top-0 text-black bg-[#d3fd50]">
               <div className="flex moveX items-center">
                 <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-[15vw]  text-center uppercase pt-3 leading-[0.8]">Pour Toit Voir</h2>
@@ -111,9 +112,9 @@ const FullScreenNav = () => {
                 <img className="lg:w-48 shrink-0 rounded-full w-28 h-10 lg:h-20 object-cover" src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
               </div>
             </div>
-          </div>
+          </Link>
 
-          <div className="link origin-top relative border-t border-white overflow-hidden">
+          <Link to='/agence' className="link origin-top relative border-t border-white overflow-hidden block" onClick={() => setNavOpen(false)}>
             <h1 className="font-[font2] lg:text-[8vw] text-[15vw]   text-center uppercase pt-3 leading-[0.8]">Agence</h1>
            <div className="moveLink flex absolute top-0 text-black bg-[#d3fd50]">
               <div className="flex moveX items-center">
@@ -129,9 +130,9 @@ const FullScreenNav = () => {
                 <img className="lg:w-48 shrink-0 rounded-full w-28 h-10 lg:h-20 object-cover" src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
               </div>
             </div>
-          </div>
+          </Link>
 
-          <div className="link origin-top relative border-t border-white overflow-hidden">
+          <div className="link origin-top relative border-t border-white overflow-hidden block cursor-pointer">
             <h1 className="font-[font2] lg:text-[8vw] text-[15vw]   text-center uppercase pt-3 leading-[0.8]">Contact</h1>
             <div className="moveLink flex absolute top-0 text-black bg-[#d3fd50]">
               <div className="flex moveX items-center">
@@ -149,7 +150,7 @@ const FullScreenNav = () => {
             </div>
           </div>
 
-          <div className="link origin-top relative border-y border-white overflow-hidden">
+          <div className="link origin-top relative border-y border-white overflow-hidden block cursor-pointer">
             <h1 className="font-[font2] lg:text-[8vw] text-[15vw]   text-center uppercase pt-3 leading-[0.8]">Blogs</h1>
             <div className="moveLink flex absolute top-0 text-black bg-[#d3fd50]">
               <div className="flex moveX items-center">
