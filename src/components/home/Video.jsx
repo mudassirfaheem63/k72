@@ -1,5 +1,5 @@
 import React from 'react';
-
+ 
 const Video = () => {
   return (
      <div className='h-full w-full'>
@@ -7,5 +7,5 @@ const Video = () => {
     </div>
   )
 }
-
+ 
 export default Video
