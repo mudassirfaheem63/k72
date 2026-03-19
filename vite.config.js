@@ -1,10 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'   // ← THIS WAS MISSING
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [
     react(),
-    tailwindcss(),   // ← ADD THIS
+    tailwindcss(),
   ],
+  base: '/k72/',          // ← THIS WAS MISSING (your repo name is "k72")
 })
