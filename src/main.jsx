@@ -8,7 +8,7 @@ import NavContext from './context/NavContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-   <BrowserRouter basename="/k72">
+   <BrowserRouter>
     <Stair>
       <NavContext>
         <App />
