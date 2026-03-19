@@ -6,6 +6,5 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-  ],
-  base: '/k72/',          // ← THIS WAS MISSING (your repo name is "k72")
+  ] 
 })
